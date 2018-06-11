@@ -125,7 +125,7 @@ public class CamelConfigPostProcessor implements Processor {
 					String fromUri = credential.getUrl() + from.getPath() +
 							"?username=" + credential.getUsername() + 
 							"&amp;password=" + credential.getPassword() + 
-							"&amp;localWorkDirectory=\\tmpATSLinkDemux&amp;delete=true";
+							"&amp;localWorkDirectory=\\tmpDynmc&amp;delete=true";
 					
 					routeBuilder.append(
 							"<route autoStartup=\"false\" id=\"mapRoute_" + xyIdPrefix + "\">\r\n" + 
