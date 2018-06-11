@@ -4,12 +4,12 @@
     <bean class="com.antaresvision.CamelConfigPostProcessor" id="CamelConfigPostProcessor"/>
     <camelContext id="_context1" xmlns="http://camel.apache.org/schema/blueprint">
         <route autoStartup="true" id="BeforeStartConfigProcessor">
-            <from id="PreFromConfig" uri="file:{{atsROOTPath}}/{{atsCONFIGSIMULATOR}}?noop=true"/>
+            <from id="PreFromConfig" uri="file:{{ROOTPath}}/{{CONFIGSIMULATOR}}?noop=true"/>
             <setHeader headerName="CONFIGFilePath" id="xsltPathID">
-                <simple>{{atsROOTPath}}/{{atsCONFIGSIMULATOR}}/{{atsCONFIGFileName}}</simple>
+                <simple>{{ROOTPath}}/{{CONFIGSIMULATOR}}/{{CONFIGFileName}}</simple>
             </setHeader>
             <setHeader headerName="XSLTPath" id="xsltPathID">
-                <simple>{{atsROOTPath}}/{{atsXSLTPath}}</simple>
+                <simple>{{ROOTPath}}/{{XSLTPath}}</simple>
             </setHeader>
             <log id="PrestartMessage" message="Pre Configurator of ActiveMQ routes is started for sftp!"/>
             <log id="_log1" message="${header.CamelFileName}"/>

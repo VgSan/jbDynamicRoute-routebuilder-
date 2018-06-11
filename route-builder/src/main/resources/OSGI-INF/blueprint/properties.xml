@@ -3,13 +3,13 @@
     xmlns:camel="http://camel.apache.org/schema/blueprint"
     xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
-    <cm:property-placeholder id="atsDishProperties"
-        persistent-id="com.antaresvision.ats.demux" update-strategy="reload">
+    <cm:property-placeholder id="DishProperties"
+        persistent-id="route.builder" update-strategy="reload">
         <cm:default-properties>
-            <cm:property name="atsROOTPath" value="C:/tmp/ATSDish"/>
-            <cm:property name="atsCONFIGSIMULATOR" value="CONFIGSIMULATOR"/>
-            <cm:property name="atsCONFIGFileName" value="DemuxFilterChannel.xml"/>
-            <cm:property name="atsXSLTPath" value="XSLT"/>
+            <cm:property name="ROOTPath" value="C:/tmp/Dish"/>
+            <cm:property name="CONFIGSIMULATOR" value="CONFIGSIMULATOR"/>
+            <cm:property name="CONFIGFileName" value="FilterChannel.xml"/>
+            <cm:property name="XSLTPath" value="XSLT"/>
         </cm:default-properties>
     </cm:property-placeholder>
 </blueprint>

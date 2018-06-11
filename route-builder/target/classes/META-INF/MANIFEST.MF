@@ -1,22 +1,20 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1528692065928
+Bnd-LastModified: 1528695325687
 Build-Jdk: 1.8.0_152
 Built-By: v.magenthiran
 Bundle-Blueprint: OSGI-INF/blueprint/blueprint.xml,OSGI-INF/blueprint/pr
  operties.xml
-Bundle-Description: ATS Link To Demux Connector
-Bundle-DocURL: http://www.antaresvision.com/
+Bundle-Description: route.builder
 Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.html
 Bundle-ManifestVersion: 2
-Bundle-Name: Antares.ATSLink.Demux.Service
-Bundle-SymbolicName: Antares.ATSLink.Demux.Service
-Bundle-Vendor: AntaresVision
-Bundle-Version: 1.1.0.B2
+Bundle-Name: Route.Builder.Service
+Bundle-SymbolicName: Route.Builder.Service
+Bundle-Version: 1.1.0
 Created-By: Apache Maven Bundle Plugin
-Export-Package: com.antaresvision;version="1.1.0";uses:="com.model.confi
- g,org.apache.camel,org.slf4j,org.w3c.dom",com.model.config;version="1.1
- .0";uses:="javax.xml.bind.annotation"
-Import-Package: com.model.config;version="[1.1,2)",javax.xml.bind,javax.
+Export-Package: com.model.config;uses:="javax.xml.bind.annotation";versi
+ on="1.1.0",com.route.builder;uses:="com.model.config,org.apache.camel,o
+ rg.slf4j,org.w3c.dom";version="1.1.0"
+Import-Package: com.antaresvision,com.model.config,javax.xml.bind,javax.
  xml.bind.annotation,javax.xml.namespace,javax.xml.parsers,javax.xml.xpa
  th,org.apache.camel;version="[2.17,3)",org.apache.camel.builder;version
  ="[2.17,3)",org.apache.camel.model;version="[2.17,3)",org.apache.common

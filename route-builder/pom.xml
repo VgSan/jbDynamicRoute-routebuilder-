@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.antaresvision</groupId>
-	<artifactId>ats-l4-itslink-demux-1.0.0</artifactId>
-	<version>1.1.0-B2</version>
+	<groupId>com.route.builder</groupId>
+	<artifactId>route.builder-1.0.0</artifactId>
+	<version>1.1.0</version>
 	<packaging>bundle</packaging>
-	<name>ATS Link-Demux-1.0.1</name>
+	<name>route.builder-1.0.1</name>
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -133,8 +133,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>Antares.ATSLink.Demux.Service</Bundle-SymbolicName>
-						<Bundle-Name>Antares.ATSLink.Demux.Service</Bundle-Name>
+						<Bundle-SymbolicName>Route.Builder.Service</Bundle-SymbolicName>
+						<Bundle-Name>Route.Builder.Service</Bundle-Name>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -162,9 +162,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<description>ATS Link To Demux Connector</description>
-	<organization>
-		<name>AntaresVision</name>
-		<url>http://www.antaresvision.com/</url>
-	</organization>
+	<description>route.builder</description>
 </project>

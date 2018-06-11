@@ -1,4 +1,4 @@
-package com.antaresvision;
+package com.route.builder;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -118,7 +118,7 @@ public class CamelConfigPostProcessor implements Processor {
 				String fromUri = credential.getUrl() + from.getPath() + 
 						"?username=" + credential.getUsername() + 
 						"&password=" + credential.getPassword() + 
-						"&localWorkDirectory=\\tmpATSLinkDemux&delete=true";
+						"&localWorkDirectory=\\tmpDyn&delete=true";
 				
 				logger.info(fromUri);
 				RouteBuilder builder = new RouteBuilder() {
@@ -129,7 +129,7 @@ public class CamelConfigPostProcessor implements Processor {
 					    .autoStartup(false)
 					    .setHeader("CONFIGFilePath").simple(configFilePath)
 					    .setHeader("ChannelType").simple(channel.getType())
-					    .process(new DemuxProcessor())
+					    .process(new SecondProcessor())
 					    .to("xslt:file:///" + xsltPath + "/" + channel.getType() + ".xsl?saxon=true")
 					    .toD("${headers.destinationFolder}");
 					}

@@ -1,4 +1,4 @@
-package com.antaresvision;
+package com.route.builder;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -22,9 +22,9 @@ import org.w3c.dom.Node;
 
 import com.model.config.Channels;
 
-public class DemuxProcessor implements Processor {
+public class SecondProcessor implements Processor {
 
-	public static final Logger logger = LoggerFactory.getLogger(DemuxProcessor.class);
+	public static final Logger logger = LoggerFactory.getLogger(SecondProcessor.class);
 
 	public void process(Exchange exchange) throws Exception {
 
