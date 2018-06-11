@@ -1,0 +1,12 @@
+com\model\config\Channels$Channel$From.class
+com\model\config\Channels$Channel$Credentials.class
+com\model\config\Channels$Channel$To.class
+com\antaresvision\DemuxProcessor.class
+com\model\config\ObjectFactory.class
+com\model\config\Channels.class
+com\model\config\Channels$Mappings.class
+com\model\config\Channels$ATS.class
+com\model\config\Channels$Channel.class
+com\antaresvision\CamelConfigPostProcessor.class
+com\model\config\Channels$Mappings$Mapping.class
+com\antaresvision\CamelConfigPostProcessor$1.class

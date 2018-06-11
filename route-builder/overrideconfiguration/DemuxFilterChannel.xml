@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Channels>
+	<ATS fileVersion="1.1.0.0" productVersion="1.1.0.0" />
+	<!-- mapping bidirectional that must be applied to all input/output messages -->
+	<Mappings xpath="//value01" type="INPUT">
+		<Mapping find="GLN_01" replaceWith="Site_name_01"/>
+		<Mapping find="GLN_02" replaceWith="Site_name_02"/>
+		<Mapping find="GLN_03" replaceWith="Site_name_03"/>
+		<Mapping find="GLN_04" replaceWith="Site_name_04"/>
+		<Mapping find="GLN_05" replaceWith="Site_name_05"/>
+		<Mapping find="GLN_06" replaceWith="Site_name_06"/>
+	</Mappings>
+	<Mappings xpath="//value" type="OUTPUT">
+		<Mapping find="Site_name_01" replaceWith="GLN_01"/>
+		<Mapping find="Site_name_02" replaceWith="GLN_02"/>
+		<Mapping find="Site_name_03" replaceWith="GLN_03"/>
+		<Mapping find="Site_name_04" replaceWith="GLN_04"/>
+		<Mapping find="Site_name_05" replaceWith="GLN_05"/>
+		<Mapping find="Site_name_06" replaceWith="GLN_06"/>
+	</Mappings>
+	
+	<!-- Define the sFTP INPUT channel of ATSLink Demux -->
+	<Channel type="INPUT">
+		<Credentials url="ftp://localhost:251/" username="DOMAIN-CO-LK\v.magenthiran" password="password" certificateFile="/opt/certificates/prova.p12"/>
+		<!-- Define the subfolders where the ATSLink Demux is listen from remote sFTP folder -->
+		<From path="INPUT/A"/>
+		<From path="INPUT/B"/>
+		<From path="INPUT/C"/>
+		<From path="INPUT/D"/>
+		<!-- A rule that must be applied on incoming file from sFTP and redirect to the correct CMO -->
+		<To xpath="//detail[@name = 'Customer_01']" destinationFolder="000001"/>
+		<To xpath="//detail[@name = 'Customer_02']" destinationFolder="000002"/>
+	</Channel>
+	<!-- Define the sFTP OUTPUT channel of ATSLink Demux -->
+	<Channel type="OUTPUT">
+		<Credentials url="ftp://localhost:252/" username="DOMAIN-CO-LK\v.magenthiran" password="password" certificateFile="/opt/certificates/prova.p12"/>
+	    <!-- Define the subfolders where the ATSLink Demux is listen from CMO local folder-->
+		<From path="000001"/>
+		<From path="000002"/>
+		<!--  A rule that must be applied on incoming file from CMO and redirect to the correct sFTP folder -->
+		<To xpath="//detail[@name = 'TYPE_A']" destinationFolder="OUTPUT/A"/>
+		<To xpath="//detail[@name = 'TYPE_B']" destinationFolder="OUTPUT/B"/>
+		<To xpath="//detail[@name = 'TYPE_C']" destinationFolder="OUTPUT/C"/>
+		<To xpath="//detail[@name = 'TYPE_D']" destinationFolder="OUTPUT/D"/>
+	</Channel>
+</Channels>

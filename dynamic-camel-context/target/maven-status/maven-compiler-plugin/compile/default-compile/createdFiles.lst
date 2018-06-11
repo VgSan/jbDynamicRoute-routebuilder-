@@ -1,0 +1,10 @@
+com\model\config\Channels.class
+com\model\config\Channels$Mappings.class
+com\model\config\Channels$ATS.class
+com\model\config\Channels$Channel$From.class
+com\model\config\Channels$Channel$Credentials.class
+com\model\config\Channels$Channel.class
+com\model\config\Channels$Channel$To.class
+com\antaresvision\CamelConfigPostProcessor.class
+com\model\config\Channels$Mappings$Mapping.class
+com\model\config\ObjectFactory.class

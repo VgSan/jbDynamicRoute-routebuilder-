@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1528692065928
+Build-Jdk: 1.8.0_152
+Built-By: v.magenthiran
+Bundle-Blueprint: OSGI-INF/blueprint/blueprint.xml,OSGI-INF/blueprint/pr
+ operties.xml
+Bundle-Description: ATS Link To Demux Connector
+Bundle-DocURL: http://www.antaresvision.com/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.html
+Bundle-ManifestVersion: 2
+Bundle-Name: Antares.ATSLink.Demux.Service
+Bundle-SymbolicName: Antares.ATSLink.Demux.Service
+Bundle-Vendor: AntaresVision
+Bundle-Version: 1.1.0.B2
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.antaresvision;version="1.1.0";uses:="com.model.confi
+ g,org.apache.camel,org.slf4j,org.w3c.dom",com.model.config;version="1.1
+ .0";uses:="javax.xml.bind.annotation"
+Import-Package: com.model.config;version="[1.1,2)",javax.xml.bind,javax.
+ xml.bind.annotation,javax.xml.namespace,javax.xml.parsers,javax.xml.xpa
+ th,org.apache.camel;version="[2.17,3)",org.apache.camel.builder;version
+ ="[2.17,3)",org.apache.camel.model;version="[2.17,3)",org.apache.common
+ s.net.ftp;version="[3.6,4)",org.osgi.service.blueprint;version="[1.0.0,
+ 2.0.0)",org.slf4j;version="[1.7,2)",org.w3c.dom
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
