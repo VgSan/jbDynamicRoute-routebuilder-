@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.antaresvision</groupId>
-	<artifactId>ats-l4-itslink-demux-1.0.0</artifactId>
-	<version>1.1.0-B1</version>
+	<groupId>com.dynamic.route</groupId>
+	<artifactId>dynamic.route-1.0.0</artifactId>
+	<version>1.1.0</version>
 	<packaging>bundle</packaging>
-	<name>ATS Link-Demux-1.0.0</name>
+	<name>1.0.0</name>
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -133,8 +133,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>Antares.ATSLink.Demux.Service</Bundle-SymbolicName>
-						<Bundle-Name>Antares.ATSLink.Demux.Service</Bundle-Name>
+						<Bundle-SymbolicName>Dynamic.Route.Service</Bundle-SymbolicName>
+						<Bundle-Name>Dynamic.Route.Service</Bundle-Name>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -162,9 +162,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<description>ATS Link To Demux Connector</description>
-	<organization>
-		<name>AntaresVision</name>
-		<url>http://www.antaresvision.com/</url>
-	</organization>
+	<description>Connector</description>
 </project>
